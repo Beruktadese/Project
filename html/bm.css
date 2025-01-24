@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #004d00;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.home-text h2 {
+    font-size: 2em;
+    color: #004d00;
+}
+
+.home-text p {
+    font-size: 1.2em;
+}
+
+
+.skills, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+
+.all_footer {
+    background-color: #004d00;
+width: 100vw;
+height: 15vh;
+text-align: center;
+color: aliceblue;
+padding: 10px 0; 
+position: relative;
+border-top-right-radius: 50px ;
+}
+#about{
+    background-color: antiquewhite;
+}
+#donate{
+    background-color: antiquewhite;
+}
+#login{
+    background-color: antiquewhite;
+}
+#about{
+    min-width: none;
+}

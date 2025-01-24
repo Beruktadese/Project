@@ -1,0 +1,69 @@
+#headers{
+    background-color:burlywood;
+    color: black;
+    text-align: center;
+    margin-top: auto;
+}
+body{
+    background-image: url("https://img.freepik.com/free-photo/trees-with-snow_1048-2653.jpg?semt=ais_hybrid");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#passage{
+    background-color:beige;
+    color: black;
+    padding-left: 8px;
+    
+#members{
+    background-color: brown;
+    color: aliceblue;
+    text-align: center;
+    
+}
+}
+#just{
+    background-color: brown;
+    color: aliceblue;
+    text-align: center;
+   
+}
+#para{
+    background-color: rgb(94, 75, 51);
+    color: aliceblue;
+}
+#border{
+    border: 2px solid#000;
+    border-radius: 10px;
+    padding:20px ;
+    width: 50%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    background-image: url("https://img.freepik.com/premium-photo/underwater-view-blue-water-ocean-with-little-island-environment-concept_9083-6921.jpg?ga=GA1.1.2071159055.1737749417&semt=ais_hybrid");
+}
+#mem{
+    border: 2px solid#000;
+    border-radius: 10px;
+    padding:20px ;
+    width: 50%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    background-image: url("https://image.shutterstock.com/image-photo/picturesque-sunrise-login-reflecting-on-260nw-2511953685.jpg");
+    
+}
+#for{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+
+    background-image: url("https://media.istockphoto.com/id/508493580/photo/isle-of-portland-in-dorset-england.jpg?s=612x612&w=0&k=20&c=AL05XMzORistdgsfSE2JBZ48jSrlLRyZhROVKz9LkI0=");
+}
+#head{
+    background-color: beige;
+    text-align: center;
+}
+    
