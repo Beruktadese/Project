@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="prac.css">
 </head>
 <body>
-    <h2>Payment Successful!</h2>
+    <h1>Login</h1>
+    <section id="form">
+        <form action="/login" method="post">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required placeholder="Enter username"><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required placeholder="Enter password"><br>
+        </form>
+    </section>
+    <a href="signcer.html">
+        <button type="button">Login</button>
+      </a>
 </body>
 </html>

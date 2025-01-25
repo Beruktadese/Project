@@ -4,9 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="membership.css">
 </head>
 <body>
-    <label for="favcolor">Select your favorite color:</label>
-<input type="color" id="favcolor" value="#ff0000">
+  <div class="container">
+    <h1>Menu Manager</h1>
+    
+    <div class="form-container">
+      <h2>Add Item</h2>
+      <form id="addItemForm">
+        <input type="text" id="itemName" placeholder="Item Name" required>
+        <input type="number" id="itemPrice" placeholder="Item Price" required>
+        <button type="submit">Add Item</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Change Item Price</h2>
+      <form id="changePriceForm">
+        <input type="text" id="changeItemName" placeholder="Item Name" required>
+        <input type="number" id="newPrice" placeholder="New Price" required>
+        <button type="submit">Update Price</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2>Change Menu</h2>
+      <form id="changeMenuForm">
+        <select id="menuSelection">
+          <option value="" disabled selected>Select Item to Remove</option>
+        </select>
+        <button type="submit">Remove Item</button>
+      </form>
+    </div>
+
+    <h2>Current Menu</h2>
+    <table id="menuTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items will be added dynamically here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const addItemForm = document.getElementById('addItemForm');
+    const changePriceForm = document.getElementById('changePriceForm');
+    const changeMenuForm = document.getElementById('changeMenuForm');
+    const menuTable = document.getElementById('menuTable').getElementsByTagName('tbody')[0];
+    const menuSelection = document.getElementById('menuSelection');
+
+    let menuItems = [];
+
+    // Function to update the menu table and the item selection dropdown
+    function updateMenu() {
+      // Clear current menu table
+      menuTable.innerHTML = '';
+      menuSelection.innerHTML = '<option value="" disabled selected>Select Item to Remove</option>';
+
+      // Add items to the table and the dropdown
+      menuItems.forEach(item => {
+        const row = menuTable.insertRow();
+        row.innerHTML = `<td>${item.name}</td><td>$${item.price.toFixed(2)}</td>`;
+        
+        const option = document.createElement('option');
+        option.value = item.name;
+        option.textContent = item.name;
+        menuSelection.appendChild(option);
+      });
+    }
+
+    // Add new item
+    addItemForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const itemName = document.getElementById('itemName').value;
+      const itemPrice = parseFloat(document.getElementById('itemPrice').value);
+
+      if (itemName && itemPrice > 0) {
+        menuItems.push({ name: itemName, price: itemPrice });
+        updateMenu();
+      } else {
+        alert("Please provide valid item name and price.");
+      }
+
+      addItemForm.reset();
+    });
+
+    // Change the price of an item
+    changePriceForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const itemName = document.getElementById('changeItemName').value;
+      const newPrice = parseFloat(document.getElementById('newPrice').value);
+
+      const item = menuItems.find(item => item.name === itemName);
+
+      if (item && newPrice > 0) {
+        item.price = newPrice;
+        updateMenu();
+      } else {
+        alert("Item not found or invalid price.");
+      }
+
+      changePriceForm.reset();
+    });
+
+    // Remove an item from the menu
+    changeMenuForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const itemName = menuSelection.value;
+
+      if (itemName) {
+        menuItems = menuItems.filter(item => item.name !== itemName);
+        updateMenu();
+      } else {
+        alert("Please select an item to remove.");
+      }
+    });
+  </script>
+  <div id="upgrad">
+    <a href="link.html">
+        <button type="button">Update</button>
+      </a>
+  </div>
+  
 </body>
 </html>

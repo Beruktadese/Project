@@ -135,3 +135,11 @@ header {
     background-image: url("https://media.istockphoto.com/id/508493580/photo/isle-of-portland-in-dorset-england.jpg?s=612x612&w=0&k=20&c=AL05XMzORistdgsfSE2JBZ48jSrlLRyZhROVKz9LkI0=");
 
     }
+    #form{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin-left: 20px auto;
+    background-color: burlywood;
+    }

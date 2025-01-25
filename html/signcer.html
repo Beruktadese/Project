@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="prac.css">
+    <title>Ceremony Package Selection</title>
+    <link rel="stylesheet" href="bm.css">
+    
 </head>
-<body> 
+<body>
+
+    <!-- <h1>Choose Your Ceremony Items</h1>
+
+    <div class="package">
+        <label><input type="checkbox" id="item1"> Simple Decorations</label><br>
+        <label><input type="checkbox" id="item2"> Music (1 Hour)</label><br>
+        <label><input type="checkbox" id="item3"> Officiant Service</label><br>
+        <label><input type="checkbox" id="item4"> Premium Decorations</label><br>
+        <label><input type="checkbox" id="item5"> Music (2 Hours)</label><br>
+        <label><input type="checkbox" id="item6"> Event Photography</label><br>
+        <label><input type="checkbox" id="item7"> Luxury Decorations</label><br>
+        <label><input type="checkbox" id="item8"> Music (3 Hours)</label><br>
+        <label><input type="checkbox" id="item9"> Full Event Planning</label><br>
+    </div>
+
+    <button onclick="showSelected()">Show Selected Items</button>
+
+    <div id="selectedItems" class="selected-items"></div>
+
+    <script>
+        function showSelected() {
+            let selectedItems = [];
+            const items = [
+                { id: 'item1', label: 'Simple Decorations' },
+                { id: 'item2', label: 'Music (1 Hour)' },
+                { id: 'item3', label: 'Officiant Service' },
+                { id: 'item4', label: 'Premium Decorations' },
+                { id: 'item5', label: 'Music (2 Hours)' },
+                { id: 'item6', label: 'Event Photography' },
+                { id: 'item7', label: 'Luxury Decorations' },
+                { id: 'item8', label: 'Music (3 Hours)' },
+                { id: 'item9', label: 'Full Event Planning' }
+            ];
+
+            items.forEach(item => {
+                const checkbox = document.getElementById(item.id);
+                if (checkbox.checked) {
+                    selectedItems.push(item.label);
+                }
+            });
+
+            if (selectedItems.length > 0) {
+                document.getElementById('selectedItems').innerHTML = `<h3>You selected:</h3><ul><li>${selectedItems.join('</li><li>')}</li></ul>`;
+            } else {
+                document.getElementById('selectedItems').innerHTML = "<p>No items selected.</p>";
+            }
+        }
+    </script> -->
+   
+    
     <header>
-        <h1>Welcome to Our Food Menu</h1>
+        <h1> A Place of food update</h1>
     </header>
 
     <div class="menu-container">
@@ -111,54 +162,134 @@
         </div>
     </div>
   
-        <form id="payment-form">
-            <!-- Hotel Account Number Selection -->
-            <div class="payment-section" id="payment-section">
-                <h2>Enter Payment Information</h2>
-                <form id="payment-form">
-                    <!-- Hotel Account Number Selection -->
-                    <label for="hotel-account">Select Hotel Account Number:</label>
-                    <select id="hotel-account" required>
-                        <option value="">Choose an Account</option>
-                        <option value="1001">Hotel Account cbe 100143567</option>
-                        <option value="1002">Hotel Account Abisiniya 0148285</option>
-                        <option value="1003">Hotel Account Awash 108527542</option>
-                    </select>
+            <button class="order-btn">Order Now</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Menu Manager</h1>
+        
+        <div class="form-container">
+          <h2>Add Item</h2>
+          <form id="addItemForm">
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="number" id="itemPrice" placeholder="Item Price" required>
+            <button type="submit">Add Item</button>
+          </form>
+        </div>
+    
+        <div class="form-container">
+          <h2>Change Item Price</h2>
+          <form id="changePriceForm">
+            <input type="text" id="changeItemName" placeholder="Item Name" required>
+            <input type="number" id="newPrice" placeholder="New Price" required>
+            <button type="submit">Update Price</button>
+          </form>
+        </div>
+    
+        <div class="form-container">
+          <h2>Change Menu</h2>
+          <form id="changeMenuForm">
+            <select id="menuSelection">
+              <option value="" disabled selected>Select Item to Remove</option>
+            </select>
+            <button type="submit">Remove Item</button>
+          </form>
+        </div>
+    
+        <h2>Current Menu</h2>
+        <table id="menuTable">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Items will be added dynamically here -->
+          </tbody>
+        </table>
+      </div>
+    
+      <script>
+        const addItemForm = document.getElementById('addItemForm');
+        const changePriceForm = document.getElementById('changePriceForm');
+        const changeMenuForm = document.getElementById('changeMenuForm');
+        const menuTable = document.getElementById('menuTable').getElementsByTagName('tbody')[0];
+        const menuSelection = document.getElementById('menuSelection');
+    
+        let menuItems = [];
+    
+        // Function to update the menu table and the item selection dropdown
+        function updateMenu() {
+          // Clear current menu table
+          menuTable.innerHTML = '';
+          menuSelection.innerHTML = '<option value="" disabled selected>Select Item to Remove</option>';
+    
+          // Add items to the table and the dropdown
+          menuItems.forEach(item => {
+            const row = menuTable.insertRow();
+            row.innerHTML = `<td>${item.name}</td><td>$${item.price.toFixed(2)}</td>`;
             
-                    <!-- User's Account Number -->
-                    <label for="user-account">Your Account Number:</label>
-                    <input type="text" id="user-account" placeholder="Enter your account number" required>
-            
-                    <!-- Payment Amount -->
-                    <label for="amount">Amount to Pay:</label>
-                    <input type="number" id="amount" placeholder="Enter amount" required>
-            
-                    <!-- Submit Button -->
-                    <button type="button" onclick="processPayment()">Submit Payment</button>
-                </form>
-            </div>
-            
-            <!-- Success Message -->
-            <div class="success-message" id="success-message" style="display: none;">
-                <h2>Payment Successful!</h2>
-                <p>Thank you for your payment. Your transaction is complete!</p>
-            </div>
-            
-            <script>
-                // Function to simulate payment processing
-                function processPayment() {
-                    const hotelAccount = document.getElementById('hotel-account').value;
-                    const userAccount = document.getElementById('user-account').value;
-                    const amount = document.getElementById('amount').value;
-            
-                    // Check if the fields are filled
-                    if (hotelAccount && userAccount && amount) {
-                        // Hide the payment form and show success message
-                        document.getElementById('payment-section').style.display = 'none';
-                        document.getElementById('success-message').style.display = 'block';
-                    } else {
-                        alert('Please fill out all fields.');
-                    }
-                }
-            </script>
+            const option = document.createElement('option');
+            option.value = item.name;
+            option.textContent = item.name;
+            menuSelection.appendChild(option);
+          });
+        }
+    
+        // Add new item
+        addItemForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const itemName = document.getElementById('itemName').value;
+          const itemPrice = parseFloat(document.getElementById('itemPrice').value);
+    
+          if (itemName && itemPrice > 0) {
+            menuItems.push({ name: itemName, price: itemPrice });
+            updateMenu();
+          } else {
+            alert("Please provide valid item name and price.");
+          }
+    
+          addItemForm.reset();
+        });
+    
+        // Change the price of an item
+        changePriceForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const itemName = document.getElementById('changeItemName').value;
+          const newPrice = parseFloat(document.getElementById('newPrice').value);
+    
+          const item = menuItems.find(item => item.name === itemName);
+    
+          if (item && newPrice > 0) {
+            item.price = newPrice;
+            updateMenu();
+          } else {
+            alert("Item not found or invalid price.");
+          }
+    
+          changePriceForm.reset();
+        });
+    
+        // Remove an item from the menu
+        changeMenuForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const itemName = menuSelection.value;
+    
+          if (itemName) {
+            menuItems = menuItems.filter(item => item.name !== itemName);
+            updateMenu();
+          } else {
+            alert("Please select an item to remove.");
+          }
+        });
+      </script>
+      <div id="upgrad">
+        <a href="link.html">
+            <button type="button">Update</button>
+          </a>
+      </div>
+      
+  
+</body>
 </html>
