@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Interface</title>
+</head>
+<body>
+
+    <header>
+        <h1>Payment Details</h1>
+    </header>
+
+    <!-- Payment Form Section -->
+    <div class="payment-section" id="payment-section">
+        <h2>Enter Payment Information</h2>
+        <form id="payment-form">
+            <!-- Hotel Account Number Selection -->
+            <label for="hotel-account">Select Hotel Account Number:</label>
+            <select id="hotel-account" required>
+                <option value="">Choose an Account</option>
+                <option value="1001">Hotel Account 1001</option>
+                <option value="1002">Hotel Account 1002</option>
+                <option value="1003">Hotel Account 1003</option>
+            </select>
+
+            <!-- User's Account Number -->
+            <label for="user-account">Your Account Number:</label>
+            <input type="text" id="user-account" placeholder="Enter your account number" required>
+
+            <!-- Payment Amount -->
+            <label for="amount">Amount to Pay:</label>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="processPayment()">Submit Payment</button>
+        </form>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="success-message" style="display: none;">
+        <h2>Payment Successful!</h2>
+        <p>Thank you for your payment. Your transaction is complete!</p>
+    </div>
+
+    <script>
+        // Function to simulate payment processing
+        function processPayment() {
+            const hotelAccount = document.getElementById('hotel-account').value;
+            const userAccount = document.getElementById('user-account').value;
+            const amount = document.getElementById('amount').value;
+
+            // Check if the fields are filled
+            if (hotelAccount && userAccount && amount) {
+                // Hide the payment form and show success message
+                document.getElementById('payment-section').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
+</body>
+</html>
