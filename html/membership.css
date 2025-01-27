@@ -59,13 +59,13 @@ a {
 
 
 #reg{
-  border: 200px solid #000000;
-    border-radius: 100px;
+  border: 2px solid #251a1a;
+    border-radius: 10px;
     padding: 20px;
     width: 8%;
     margin-left: auto;
-    background-color: #e1f810;
-    border: 2px solid #000;  /* Adds a solid black border */
+    background-color: #363b09;
+    border: 2px solid #200606;  /* Adds a solid black border */
     margin: 2px;             /* Adds space around the box */
     padding: 10px;
 }
@@ -163,6 +163,81 @@ input, button {
   font-size: 8px;
   margin: 5px;
 }
-#bb{
-  background-color: #d8d516;
+/* #bb{
+  background-color: #494808;
+} */
+
+
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+input[type=email], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.cancelbtn {
+ width: auto;
+padding: 10px 18px;
+background-color: #f44336;
+}
+
+
+.container {
+width: 1000px;
+margin-left: 150px;
+  padding: 50px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.shadow{
+color:orange;
+text-shadow: 1px 1px 5px black;
+transition: transform .2s;
+  margin: 0 auto;
+}
+
+.shadow:hover {
+  -webkit-transform: scale(2); /* Safari 3-8 */
+  transform: scale(2); 
 }

@@ -6,12 +6,12 @@ body {
 }
 
 header {
-    background-color: #4CAF50; 
+    background-color: #082e09; 
     padding: 10px 20px;
     text-align: center;
-    color: white; 
-    background-color: #03fc7b; /* Charcoal Blue */
-    color: #121414; /* Light gray text for readability */
+    color: rgb(22, 19, 19); 
+    background-color: #2e3328; /* Charcoal Blue */
+    color: hsl(0, 36%, 95%); /* Light gray text for readability */
     padding: 15px 0;
 }
 
@@ -39,7 +39,7 @@ nav a:hover {
 }
 
 .about-container img {
-    width: 250px;
+    max-width: 65%;
     height: auto;
     border-left: #f0fdf4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -48,6 +48,9 @@ nav a:hover {
         color: white; /* For better text contrast */
         font-family: Arial, sans-serif; /* Choose a clean, legible font */
     }
+    max-width: 35%; /* Adjust this size based on your image
+    /* height: auto; */ 
+    height: auto; 
     
 }
 
@@ -65,32 +68,33 @@ nav a:hover {
 
 }
 
-
+/* 
 .skills div {
     margin: 10px 0;
-    background-color: #f5f5dc;
-    border: 1px solid #c3d4f8; 
+    background-color: #a8a89b;
+    border: 1px solid #262c38; 
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    color: #003d7a;
+    color: #061729;
 
  }
 .skills div:hover {
-    background-color: #e1edff;
+    background-color: #dde4d3;
     cursor: pointer;
-}
+    text-decoration: underline;
+} */
 
-footer {
-    background-color: #333; 
-    color: #bbb; 
+/* footer {
+    background-color: #0f0a01; 
+    color: #f0eded; 
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0; */
 }
-footer a {
-    color:  #a5b1c4;
+/* footer a {
+    color:  #acbfdf;
     text-decoration: none;
-}
+} */
 footer a:hover {
     color:  #f0fdf4;
 }
@@ -104,3 +108,172 @@ footer a:hover {
         margin-bottom: 15px;
     }
 }
+#login{
+
+        border: 2px solid #000;  
+        padding: 20px;  
+        background-color: #ddc3c3;  
+        width: 300px; 
+        margin: 20px 0
+       
+}
+#footer{
+    background-color: #0f0a01; 
+    color: #f0eded; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* optional: adds space between text and image */
+}
+
+.home-text {
+    max-width: 60%; /* Adjust this based on how much space you want for the text */
+  
+}
+
+.grace-image {
+    max-width: 35%; /* Adjust this size based on your image */
+    height: auto;
+}
+
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.skills div a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+
+    margin: 10px 0;
+
+}
+
+.skills div a:hover {
+    text-decoration: underline;
+    background-color: #dde4d3;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+
+
+
+
+/* Centering the login form on the page */
+section#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Styling the form container */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form header styling */
+form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Input fields styling */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/* Buttons styling */
+form button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Reset button styling */
+form button[type="reset"] {
+    background-color: #f44336;
+}
+
+form button[type="reset"]:hover {
+    background-color: #9e8383;
+}
+
+/* Link styling */
+form a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    form h1 {
+        font-size: 20px;
+    }
+}
+
+/* form input[type="text"],
+form input[type="password"] {
+    border: 1px solid #ddd; /* Reduce border width to 1px */
+}
+
+/* form button {
+    border: none; /* Remove border for the buttons */
+} 
