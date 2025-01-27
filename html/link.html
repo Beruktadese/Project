@@ -131,7 +131,12 @@
             
                     <!-- Payment Amount -->
                     <label for="amount">Amount to Pay:</label>
-                    <input type="number" id="amount" placeholder="Enter amount" required>
+                    <input type="number" id="amount" placeholder="Enter amount" required><br>
+                    <label for="agree"><br>
+                        <input type="checkbox" id="agree" name="agree" required>
+                        I agree to the <a href="#">Terms & Conditions</a><br>
+                      </label>
+                      
             
                     <!-- Submit Button -->
                     <button type="button" onclick="processPayment()">Submit Payment</button>

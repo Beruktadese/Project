@@ -6,11 +6,11 @@ body {
 }
 
 header {
-    background-color: #082e09; 
+    /* background-color:#1B5E20; */
     padding: 10px 20px;
     text-align: center;
     color: rgb(22, 19, 19); 
-    background-color: #2e3328; /* Charcoal Blue */
+    background-color:#634205;/* Charcoal Blue */
     color: hsl(0, 36%, 95%); /* Light gray text for readability */
     padding: 15px 0;
 }
