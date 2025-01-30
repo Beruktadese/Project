@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prac.css">
+</head>
+<body id="ccc">
+    <div class="container">
+        <h1>Ceremony Planner</h1>
+        <form id="ceremony">
+            <label>
+              <input type="radio" name="ceremony" value="hahu planner">hahu planner
+            </label>
+            <label>
+              <input type="radio" name="ceremony" value="abc planner"> abc planner
+            </label>
+            <label>
+              <input type="radio" name="ceremony" value="hope planner"> hope planner
+            </label>
+          </form>
+        <div class="section" id="ceremony-section">
+            <h2>Choose a Ceremony</h2>
+            <form id="ceremony">
+                <label>
+                  <input type="radio" name="ceremony" value="hahu planner">Wedding Ceremony -75000 birrr
+                </label><br>
+                <label>
+                  <input type="radio" name="ceremony" value="abc planner"> Birthday Celebration - 15000 birr
+                </label><br>
+                <label>
+                  <input type="radio" name="ceremony" value="hope planner"> Corporate Event - 20000 birr
+                </label><br>
+                <input type="radio" name="ceremony" value="hope planner"> Anniversary Celebration - 30000 birr
+                </label><br>
+            </label><br>
+            <input type="radio" name="ceremony" value="hope planner"> Graduation - 15000 birr
+            </label><br>
+              </form>
+        </div>
+
+        <div class="section hidden" id="summary-section">
+            <h2>Summary</h2>
+            <div class="summary" id="summary-details">
+                <!-- Summary details will go here -->
+            </div>
+        
+        <a href="ggg.html">
+            <button class="hidden" id="proceed-button">Proceed</button>
+        </a>
+    <script>
+        const ceremonyOptions = document.querySelectorAll('#ceremony-options li');
+        const additionalOptions = document.querySelectorAll('#additional-options li');
+        const additionalSection = document.getElementById('additional-section');
+        const summarySection = document.getElementById('summary-section');
+        const proceedButton = document.getElementById('proceed-button');
+        const summaryDetails = document.getElementById('summary-details');
+
+        let selectedCeremony = null;
+        let selectedAdditionalOptions = [];
+        let totalPrice = 0;
+
+        ceremonyOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                selectedCeremony = {
+                    name: option.textContent,
+                    price: parseInt(option.getAttribute('data-price'))
+                };
+
+                totalPrice = selectedCeremony.price;
+                additionalSection.classList.remove('hidden');
+                summarySection.classList.add('hidden');
+                proceedButton.classList.remove('hidden');
+
+                updateSummary();
+            });
+        });
+
+        additionalOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const optionPrice = parseInt(option.getAttribute('data-price'));
+
+                if (!selectedAdditionalOptions.some(o => o.name === option.textContent)) {
+                    selectedAdditionalOptions.push({
+                        name: option.textContent,
+                        price: optionPrice
+                    });
+
+                    totalPrice += optionPrice;
+                } else {
+                    selectedAdditionalOptions = selectedAdditionalOptions.filter(o => o.name !== option.textContent);
+                    totalPrice -= optionPrice;
+                }
+
+                updateSummary();
+            });
+        });
+
+        proceedButton.addEventListener('click', () => {
+            summarySection.classList.remove('hidden');
+            proceedButton.classList.add('hidden');
+        });
+
+        function updateSummary() {
+            summaryDetails.innerHTML = `
+                <p><strong>Ceremony:</strong> ${selectedCeremony.name} - $${selectedCeremony.price}</p>
+                <p><strong>Additional Options:</strong></p>
+                <ul>
+                    ${selectedAdditionalOptions.map(o => `<li>${o.name} - $${o.price}</li>`).join('')}
+                </ul>
+                <p><strong>Total Price:</strong> $${totalPrice}</p>
+            `;
+        }
+    </script>
+    <style>
+        label {
+            display: inline-block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        input[type="radio"] {
+            margin-right: 10px; /* Add space between radio button and label text */
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

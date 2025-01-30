@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.menu-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menu-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+.menu-item h3 {
+    color: #333;
+}
+.menu-item p {
+    color: #777;
+    font-size: 14px;
+}
+.menu-item .price {
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+}
+.quantity-container {
+    margin-top: 10px;
+}
+.quantity-container label {
+    font-size: 14px;
+    color: #333;
+}
+.quantity-container input {
+    width: 50px;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.order-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.order-btn:hover {
+    background-color: #218838;
+}
+
+#for{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+
+    background-image: url("https://media.istockphoto.com/id/508493580/photo/isle-of-portland-in-dorset-england.jpg?s=612x612&w=0&k=20&c=AL05XMzORistdgsfSE2JBZ48jSrlLRyZhROVKz9LkI0=");
+}
+
+    /* Add a smaller border around the payment section */
+    .payment-section {
+        border: 1px solid #007bff; /* Reduced to 1px blue border */
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+    }
+
+    /* Add a smaller border around the success message */
+    .success-message {
+        border: 1px solid #28a745; /* Reduced to 1px green border */
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px ;
+        background-color: #d4edda; /* Light green background for success */
+    }
+
+    /* Style the form input fields and labels */
+    input, select {
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        
+    }
+
+    button {
+        background-color: #007bff; /* Blue background for the button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    .payment-section, .success-message {
+        border: 10px solid #007bff; /* Reduced to 1px blue and green border */
+    }
+    .payment-section, .success-message {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin-left: 20px auto;
+    background-color: #f9f9f9;
+
+    background-image: url("https://media.istockphoto.com/id/508493580/photo/isle-of-portland-in-dorset-england.jpg?s=612x612&w=0&k=20&c=AL05XMzORistdgsfSE2JBZ48jSrlLRyZhROVKz9LkI0=");
+
+    }
+    #form{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin-left: 20px auto;
+    background-color: burlywood;
+    }
+
+    #jjj{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    margin-left: 20px auto;
+    background-color: burlywood;
+    }
+    #ceremony {
+        border: 3px solid #b48282;  /* Border around the box */
+        padding: 20px;  /* Padding inside the box */
+        background-color: #fcefef;  /* Light background color */
+        width: 300px;  /* Set width of the box */
+        margin: 20px 0;  /* Space outside the box */
+    }
+
+    label {
+        display: block;  /* Make labels appear one below the other */
+        margin: 10px 0;  /* Add space between each label */
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;  /* Add space between radio button and label text */
+    }
+    .ceremony-box {
+        border: 2px solid #000;  /* Border around the box */
+        padding: 20px;  /* Padding inside the box */
+        background-color: #f9f9f9;  /* Light background color */
+        width: 300px;  /* Set width of the box */
+        margin: 20px 0;  /* Space outside the box */
+    }
+
+    label {
+        display: block;  /* Make labels appear one below the other */
+        margin: 10px 0;  /* Add space between each label */
+        font-size: 16px;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;  /* Add space between radio button and label text */
+    }
+#ccc {
+        height: 100vh; /* Make the body take up full viewport height */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0; /* Remove default margin */
+    }
