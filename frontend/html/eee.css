@@ -38,7 +38,7 @@ nav a:hover {
     align-items: center;
     gap: 20px;
     flex-direction: row-reverse;
-    color: wheat;
+    color: rgb(255, 255, 255);
 }
 
 /* .about-container img {
@@ -115,7 +115,7 @@ footer a:hover {
 
 .home-text {
     max-width: 60%; /* Adjust this based on how much space you want for the text */
-  color: wheat;
+  color: rgb(255, 255, 255);
 }
 
 .grace-image {
@@ -264,7 +264,7 @@ form input[type="password"] {
     color: rgb(255, 171, 14);
 }
 #color{
-    color: wheat;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -282,5 +282,9 @@ html, body{
   }
   
  #edit{
-    color: #c8f7c5;
+    color: #ffffff;
  }
+
+
+
+ 
