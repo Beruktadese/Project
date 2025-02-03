@@ -258,7 +258,7 @@ header {
     height: 100%;
 
 
-    background-image: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg) ;
+    background-image: url(https://img.freepik.com/free-vector/abstract-background-design-with-stars-blue_53876-43533.jpg?uid=R184656156&ga=GA1.1.2071159055.1737749417&semt=ais_hybrid) ;
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
@@ -273,4 +273,12 @@ margin-bottom: 200%;
 padding-bottom: 20px;
 border: #000;
 border-right-style: double;
+}
+#change{
+    border: #000;
+    margin-right: 30px;
+    margin-left: 200px;
+    background-color: #ffcfcf;
+    padding-right: 200px;
+    padding-left: 250p;
 }
