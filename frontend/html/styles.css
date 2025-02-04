@@ -1,42 +1,188 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
-.donation-form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a.active {
+    color: #007bff;
+}
+
+header .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .user-profile img {
+    border-radius: 50%;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-primary,
+.hero-content .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-content .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.hero-content .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.hero-image img {
+    max-width: 100%;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-button {
-    background-color: green;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: darkgreen;
-}
-#back{
-    height: 100%;
 
-
-    background-image: url("https://images.unsplash.com/photo-1619714193165-495007bc6b63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D");
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
-    background-color: #c7a7a7;
-
+/* Features Section Styles */
+.features {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: #fff;
 }
-#ll{
-    margin-left: 1000px;
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-cards .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.feature-cards .card i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.feature-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-cards .card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 10%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+#header{
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+#login{
+    box-sizing: inherit;
+    border: black;
 }

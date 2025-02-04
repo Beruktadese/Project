@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS - Manager Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <img src="https://via.placeholder.com/100x100?text=HRMS+Logo" alt="HRMS Logo" class="logo">
+                <h2>Manager Login</h2>
+                <p>Access your HRMS account to manage your team and resources.</p>
+            </div>
+            <form id="managerLoginForm">
+                <div class="form-group">
+                    <label for="managerId">Manager ID:</label>
+                    <input type="text" id="managerId" name="managerId" placeholder="Enter your Manager ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-login">Login</button>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+            </form>
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#">Contact Admin</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
