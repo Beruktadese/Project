@@ -183,6 +183,7 @@ print("the sorted words are :")
 for word in words :
     print(word)
 '''
+ 
     
 # Write a Python program to Multiply all numbers in the list.
 '''
@@ -193,6 +194,7 @@ for i in numbers:
 print("the product of the the number is :",product) 
 '''
 
+
 # Write a Python program to find smallest number in a list.
 '''
 list=[23,45,12,5,12,46,1,54]
@@ -201,6 +203,7 @@ x=list[0]
 print('the smallest number of the list is :',x)
 '''
 
+
 # Write a Python program to print odd numbers in a List.
 '''
 list=[12,4,45,56,21,65,2,21,87]
@@ -208,11 +211,10 @@ x=[a for a in list if a % 2!= 0]
 print("The odd number in the list is :",x)    
 '''
 
+
 # Write a Python program to Remove empty List from List.
 '''
 list=[[24,234],[],[343],[523],[]]
 x=[i for i in list if i]
 print("the number is :",x)
 '''
-
-# 
